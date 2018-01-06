@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<title><%= title %></title>
+	<meta charset="utf-8">
+	<meta name="viewport"  content="width=device-width, initial-scale=1">
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+
+	<!-- dont forget to include a stylesheets variable -->
+	<% if (typeof stylesheets !== 'undefined') { %>
+		<% for(var i=0; i<stylesheets.length; i++) { %>
+			<link rel='stylesheet' href=<%= stylesheets[i]%> />
+			<% } %>
+			<% } %>
+
+			</head>
+			<body>
