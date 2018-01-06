@@ -1,0 +1,42 @@
+{
+  "name": "site-boilerplate",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "gulp server"
+  },
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "dotenv": "^4.0.0",
+    "ejs": "~2.5.7",
+    "express": "~4.15.5",
+    "foundation-sites": "^6.4.4-rc1",
+    "gulp": "^3.9.1",
+    "mongodb": "^3.0.0-rc0",
+    "morgan": "~1.9.0",
+    "serve-favicon": "~2.4.5"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.18.13",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-babel": "^7.0.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-sass": "^3.1.0"
+  },
+  "description": "Foundation6 + Sass + Gulp.js + Browserify + Express.js + Babel for easy site setup and less pain in the future.",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Optykan/site-boilerplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Optykan/site-boilerplate/issues"
+  },
+  "homepage": "https://github.com/Optykan/site-boilerplate#readme"
+}
