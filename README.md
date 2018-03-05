@@ -1,10 +1,12 @@
 # site-boilerplate
-Foundation6 + Sass + Gulp.js + Browserify + Express.js + Babel for easy site setup and less pain in the future. maybe consider setting up React or something later
+React (***new!***) + Foundation6 + Sass + Gulp.js + Browserify + Express.js + Babel for easy site setup and less pain in the future. 
+
+React is included by default now, if you do not wish to include it simply remove all references to the react folder. Remove the `react` task and the corresponding `gulp.watch` in the `server` task. Then remove the folders `/assets/react` and `public/javascripts/react`.
 
 
 # Setup
 
-Clone the repo, rename it, then `npm install`. `npm run` to start the server
+Clone the repo, rename it, then `npm install`. `npm run` to start the server. If it doesn't open automatically in your browser visit `http://localhost:3001` for livereload, `http://localhost:3000` if that doesn't work.
 
 # Styles
 
