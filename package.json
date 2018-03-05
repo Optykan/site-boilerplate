@@ -34,7 +34,8 @@
     "gulp-notify": "^3.0.0",
     "gulp-sass": "^3.1.0",
     "install": "^0.10.4",
-    "npm": "^5.7.1"
+    "npm": "^5.7.1",
+    "uglify-js": "^2.6.0"
   },
   "description": "Foundation6 + Sass + Gulp.js + Browserify + Express.js + Babel for easy site setup and less pain in the future.",
   "main": "app.js",
