@@ -1,7 +1,7 @@
 # site-boilerplate
 React (***new!***) + Foundation6 + Sass + Gulp.js + Browserify + Express.js + Babel for easy site setup and less pain in the future. 
 
-React is included by default now, if you do not wish to include it simply remove all references to the react folder. Remove the `react` task and the corresponding `gulp.watch` in the `server` task. Then remove the folders `/assets/react` and `public/javascripts/react`.
+React is included by default now, if you do not wish to include it simply remove all references to the react folder. Remove the `react` task and the corresponding `gulp.watch` in the `server` task. Then remove the folders `/assets/react` and `public/javascripts/react`. Also don't forget to remove the script reference to `app.js` in `views/partials/footer.ejs`.
 
 
 # Setup
@@ -18,7 +18,7 @@ If you do not wish to include any page-specific styles, you do not need a `var s
 
 # Scripts
 
-Scripts are loaded by default at the end of the body. Note that `app.js` is included on every page.
+Scripts are loaded by default at the end of the body. Note that `app.js` (the react file), as well as `scripts.js` (other generic scripts) are included on every page.
 
 Similar to styles, to include a page-specfic script, add `/path/to/file.js` in the `scripts` array before you include `footer`.
 
