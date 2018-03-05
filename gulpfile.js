@@ -7,6 +7,8 @@ var notify      = require('gulp-notify');
 var babel       = require('gulp-babel');
 var babelcore   = require('babel-core');
 var autoprefixer= require('gulp-autoprefixer');
+var browserify  = require('browserify')
+var babelify    = require("babelify")
 
 // Static Server + watching scss/html files
 
@@ -22,7 +24,8 @@ gulp.task('server', ['sass'], function() {
 	});
 
 	gulp.watch("assets/scss/*.scss", ['sass']);
-	gulp.watch("assets/js/**/*.js", ['js']);
+	gulp.watch(["assets/js/**/*.js", "assets/js/*.js"], ['js']);
+	gulp.watch(["assets/react/**/*.js", "assets/react/*.js"], ['react']);
 	gulp.watch(["routes/*.html", "views/**/*.ejs"]).on('change', browserSync.reload);
 });
 
@@ -41,11 +44,20 @@ gulp.task('sass', function() {
 });
 
 gulp.task('js', function(){
-	gulp.src("assets/js/**/*.js")
+	gulp.src(["assets/js/**/*.js", "assets/js/*.js"])
 	.pipe(babel({
 		presets: ['env']
 	}).on('error', console.log))
 	.pipe(gulp.dest("public/javascripts"));
+
+	return browserSync.reload();
+})
+
+gulp.task('react', function(){
+	browserify("./assets/react/app.js")
+	.transform("babelify")
+	.bundle()
+	.pipe(fs.createWriteStream("public/javascripts/react/app.js"));
 
 	return browserSync.reload();
 })

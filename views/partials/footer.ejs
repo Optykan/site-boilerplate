@@ -1,12 +1,13 @@
+	<script src="/javascripts/react/app.js"></script>
 	<script src="/javascripts/vendor/jquery.js"></script>
 	<script src="/javascripts/vendor/foundation.min.js"></script>
-	<script src="/javascripts/app.js"></script>
+	<script src="/javascripts/scripts.js"></script>
 
 
 	<% if (typeof scripts !== 'undefined') { %>
-		<% for(var i=0; i<scripts.length; i++) { %>
-			<script src=<%= scripts[i]%>> </script>
-			<% } %>
-			<% } %>
-			</body>
-			</html>
+	<% for(var i=0; i<scripts.length; i++) { %>
+	<script src=<%= scripts[i]%>> </script>
+	<% } %>
+	<% } %>
+</body>
+</html>
