@@ -36,7 +36,7 @@ gulp.task('sass', function() {
 		.on('error', sass.logError))
 	.pipe(autoprefixer({
 		browsers: ['last 2 versions'],
-		cascase: false
+		cascade: false
 	}))
 	.pipe(gulp.dest("public/stylesheets"))
 	.pipe(browserSync.stream())
